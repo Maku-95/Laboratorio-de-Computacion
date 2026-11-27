@@ -4,15 +4,12 @@ import java.util.ArrayList;
 
 public class SistemaLaboratorio {
     private ArrayList<Computador> listaComputadores;
-
     public SistemaLaboratorio() {
         this.listaComputadores = new ArrayList<>();
     }
-
     public void registrarComputador(Computador pc) {
         listaComputadores.add(pc);
     }
-
     // Encontrar pc por ID
     public Computador buscarComputador(String codigoID) {
         for (int i = 0; i < listaComputadores.size(); i++) {
@@ -23,11 +20,9 @@ public class SistemaLaboratorio {
         }
         return null;
     }
-
     public String mostrarDisponibles() {
         StringBuilder texto = new StringBuilder(" COMPUTADORES DISPONIBLES \n");
         boolean hayDisponibles = false;
-
         for (int i = 0; i < listaComputadores.size(); i++) {
             Computador pc = listaComputadores.get(i);
             if (pc.getEstadoActual().equalsIgnoreCase("Disponible")) {
@@ -37,13 +32,11 @@ public class SistemaLaboratorio {
                 hayDisponibles = true;
             }
         }
-
         if (!hayDisponibles) {
             return "No hay computadores disponibles en este momento.";
         }
         return texto.toString();
     }
-
     public String mostrarEnMantencion() {
         StringBuilder texto = new StringBuilder("COMPUTADORES EN MANTENCIÓN \n");
         boolean hayEnMantencion = false;
@@ -56,7 +49,6 @@ public class SistemaLaboratorio {
                 hayEnMantencion = true;
             }
         }
-
         if (!hayEnMantencion) {
             return "No hay computadores en mantención.";
         }
