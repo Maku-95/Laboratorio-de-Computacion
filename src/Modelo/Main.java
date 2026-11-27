@@ -5,7 +5,6 @@ public class Main {
     public static void main(String[] args) {
         SistemaLaboratorio sistema = new SistemaLaboratorio();
         int opcion = 0;
-
         while (opcion != 8) {
             String menu = "GESTIÓN LABORATORIO DE COMPUTACIÓN \n"
                         + "1. Registrar computador\n"
@@ -17,17 +16,13 @@ public class Main {
                         + "7. Ver mapa del laboratorio\n"
                         + "8. Salir\n\n"
                         + "Ingrese una opción:";
-
             String entrada = JOptionPane.showInputDialog(null, menu, "Menú Principal", JOptionPane.QUESTION_MESSAGE);
-
             // Si el usuario aprieta Cancelar
             if (entrada == null) {
                 break;
             }
-
             try {
                 opcion = Integer.parseInt(entrada);
-
                 switch (opcion) {
                     case 1:
                         String id = JOptionPane.showInputDialog("Ingrese el código ID del equipo (ej: PC-01):");
