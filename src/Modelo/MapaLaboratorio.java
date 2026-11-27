@@ -88,7 +88,6 @@ public class MapaLaboratorio extends JDialog {
                     JOptionPane.showMessageDialog(null, "El puesto " + codigoID + " aún no está registrado en el sistema.");
                 } else {
                     String info = "Equipo: " + pc.getCodigoID()
-                                + "\nUbicación: " + pc.getUbicacion()
                                 + "\nCaracterísticas: " + pc.getCaracteristicas()
                                 + "\nUso recomendado: " + pc.getUsoRecomendado()
                                 + "\nEstado actual: " + pc.getEstadoActual()

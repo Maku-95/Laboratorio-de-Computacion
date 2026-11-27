@@ -6,7 +6,6 @@ public class Computador {
     private String codigoID;
     private String caracteristicas;
     private String usoRecomendado;
-    private String ubicacion;
     private String estadoActual;
     private ArrayList<Mantencion> historial;
 
@@ -14,7 +13,6 @@ public class Computador {
         this.codigoID = codigoID;
         this.caracteristicas = caracteristicas;
         this.usoRecomendado = usoRecomendado;
-        this.ubicacion = ubicacion;
         this.estadoActual = "Disponible";
         this.historial = new ArrayList<>();
     }
@@ -57,12 +55,6 @@ public class Computador {
     }
     public void setUsoRecomendado(String usoRecomendado) {
         this.usoRecomendado = usoRecomendado;
-    }
-    public String getUbicacion() {
-        return ubicacion;
-    }
-    public void setUbicacion(String ubicacion) {
-        this.ubicacion = ubicacion;
     }
     public String getEstadoActual() {
         return estadoActual;

@@ -27,7 +27,6 @@ public class SistemaLaboratorio {
             Computador pc = listaComputadores.get(i);
             if (pc.getEstadoActual().equalsIgnoreCase("Disponible")) {
                 texto.append("ID: ").append(pc.getCodigoID())
-                     .append(" | Ubicación: ").append(pc.getUbicacion())
                      .append(" | Uso: ").append(pc.getUsoRecomendado()).append("\n");
                 hayDisponibles = true;
             }
@@ -44,8 +43,7 @@ public class SistemaLaboratorio {
         for (int i = 0; i < listaComputadores.size(); i++) {
             Computador pc = listaComputadores.get(i);
             if (pc.getEstadoActual().equalsIgnoreCase("En mantencion")) {
-                texto.append("ID: ").append(pc.getCodigoID())
-                     .append(" | Ubicación: ").append(pc.getUbicacion()).append("\n");
+                texto.append("ID: ").append(pc.getCodigoID());
                 hayEnMantencion = true;
             }
         }
